@@ -20,7 +20,7 @@ pipeline {
         steps {
             echo 'Preparing deployment artifact...'
             bat 'if not exist deploy mkdir deploy'
-            bat 'copy /Y index.html deploy/index.html'
+            bat 'copy /Y index.html deploy\index.html'
             archiveArtifacts artifacts: 'deploy/index.html'
         }
     }
